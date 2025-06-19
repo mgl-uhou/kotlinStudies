@@ -1,0 +1,14 @@
+# pasta de compilados do IntelliJ
+out/
+
+# arquivos compilados
+*.class
+
+# configurações da IDE
+.idea/
+
+# Kotlin
+.kotlin
+
+# macOS
+.DS_Store
