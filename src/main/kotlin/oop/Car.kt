@@ -3,12 +3,34 @@ package oop
 //import kotlin.reflect.full.memberProperties
 
 class Car {
+    // secondary constructor, fixed
     var name: String = "Car"
     var motor: Double = 2.0
-    val colour: String = "Silver"
+    val colour: String
+
+    init {
+        colour = "Silver"
+    }
 
     fun start(): Unit {
         println("Rundundundundundundundundundun")
+    }
+}
+
+class Car2(name: String, var year: Int = 2000){ // primary constructor, dynamic
+    var name: String = name
+}
+
+class Car3(
+    var colour: String,
+    var year: Int
+){
+    // lateinit var registrationNumber: String
+    var registrationNumber: String = ""
+
+    // Secondary constructor always has to call the primary constructor
+    constructor(colour: String, year: Int, registrationNumber: String): this(colour, year){
+        this.registrationNumber = registrationNumber
     }
 }
 
@@ -22,6 +44,17 @@ fun main(){
     car1.start()
 
     println(car1)
+
+    var car2: Car2 = Car2("Cayenne")
+    println(car2.name)
+    println(car2.year)
+    car2.year = 2012
+    println(car2.year)
+
+    var car3 = Car3("Black", 2024) // -> Using the primary constructor
+    println(car3.registrationNumber) // -> Problem with lateinit, it must be initialized
+    var myCar3 = Car3("Dark Blue", 2023, "xpto") // -> Using the secondary constructor
+    println(myCar3.registrationNumber)
 }
 
 /*
