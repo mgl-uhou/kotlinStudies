@@ -18,7 +18,7 @@ fun main() {
     // NUMBER
     val price: Double = 3.14              // 64 bits
     val desconto: Float = 1.3f            // 32 bits
-    var age: Int = 18                     // use 32 bits (it's used 99% of time)
+    var age: Int = 18                     // use 32 bits (it's used 99% of the time)
     val byte: Byte = 8                    // use only 8 bits
     val short: Short = 16                 // use 16 bits
     val long: Long = 41234703248975014L   // use 64 bits
