@@ -28,7 +28,7 @@ class Car3(
     // lateinit var registrationNumber: String
     var registrationNumber: String = ""
 
-    // Secondary constructor always has to call the primary constructor
+    // Secondary constructor must always call the primary constructor
     constructor(colour: String, year: Int, registrationNumber: String): this(colour, year){
         this.registrationNumber = registrationNumber
     }
