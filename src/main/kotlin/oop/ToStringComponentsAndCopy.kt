@@ -3,11 +3,20 @@ package oop
 import kotlin.random.Random
 import kotlin.random.nextLong
 
-class Product(var id: Long, var name: String){
+data class Product(var id: Long, var name: String){
+    override fun toString(): String {
+        return "ID: ${this.id}\nName: ${this.name}"
+    }
+}
+//The following only needs to be created,
+// if desired, in a common class.
+// A data class automatically generates the copy,
+// toString, Components, hashCode, and equals functions.
+/*{
 
     override fun equals(other: Any?): Boolean = when {
         this === other        -> true
-        other !is Product       -> false
+        other !is Product     -> false
         else                  -> this.id == other.id && this.name == other.name
     }
 
@@ -26,6 +35,7 @@ class Product(var id: Long, var name: String){
 
     fun copy(id: Long = this.id, name: String = this.name) = Product(id, name)
 }
+*/
 
 fun main(){
 
@@ -33,8 +43,12 @@ fun main(){
     println(product1)
 
     val (id, name) = Product(id = randomId(), name = "Travesseiro")
-
     println("$id, $name")
+
+    val product2 = product1.copy()
+    println(product2)
+
+    println(product1 == product2)
 }
 
 fun randomId(): Long = Random.nextLong(100000000000, 999999999999)
