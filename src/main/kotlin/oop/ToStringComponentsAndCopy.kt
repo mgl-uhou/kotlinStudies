@@ -23,6 +23,8 @@ class Product(var id: Long, var name: String){
 
     operator fun component1() = this.id
     operator fun component2() = this.name
+
+    fun copy(id: Long = this.id, name: String = this.name) = Product(id, name)
 }
 
 fun main(){
