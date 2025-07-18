@@ -44,5 +44,5 @@ fun main(){
     println(p)
     println(person == p)
     println(person.hashCode())
-    println(person.firstName.hashCode() == p.firstName.hashCode())
+    println(person.hashCode() == p.hashCode())
 }
