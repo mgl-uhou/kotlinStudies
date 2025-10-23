@@ -1,6 +1,6 @@
 package oop
 
-class People {
+class PeopleExample {
     var firstName: String
     constructor(firstName: String){ // Secondary Constructor
         this.firstName = firstName
@@ -14,7 +14,7 @@ class People {
         // Example with no when above
 
         this === other -> true
-        other !is People -> false
+                other !is PeopleExample -> false
         else -> this.firstName == other.firstName
     }
 
@@ -30,8 +30,8 @@ class People2(var firstName: String) {
     }
 }
 
-fun main(){
-    val person = People("Miguel")
+fun people(){
+    val person = PeopleExample("Miguel")
     println(person.firstName)
 
     val person2 = People2(firstName = "Waleska")
@@ -39,7 +39,7 @@ fun main(){
     person2.lastName = "Laurentino"
     println(person2.firstName + " " + person2.lastName)
 
-    val p = People("Miguel")
+    val p = PeopleExample("Miguel")
     println(person)
     println(p)
     println(person == p)

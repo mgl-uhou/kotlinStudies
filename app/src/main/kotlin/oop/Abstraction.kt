@@ -18,7 +18,7 @@ class Circle : Shape() {
     }
 }
 
-fun main() {
+fun abstraction() {
     val shape: Shape = Circle()
     shape.draw() // We know it draws, but no how it's done inside.
 }

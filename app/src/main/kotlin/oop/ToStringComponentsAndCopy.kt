@@ -37,7 +37,7 @@ data class Product(var id: Long, var name: String){
 }
 */
 
-fun main(){
+fun toStringComponentsAndCopy(){
 
     val product1 = Product(randomId(), "Cama King Casal")
     println(product1)

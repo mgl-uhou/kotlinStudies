@@ -1,4 +1,4 @@
-fun main() {
+fun nullSafety() {
     println("=== Null Safety in Kotlin ===")
 
     // 🔸 Normal declaration (cannot be null)
@@ -9,7 +9,7 @@ fun main() {
     val lastName: String? = null
     println("Last Name: $lastName")
 
-    // 🔹 Safe Call Operator (?.)
+    // 🔹 Safe Ca:ll Operator (?.)
     println("Last Name length (safe call): ${lastName?.length}") // Doesn't break, returns null
 
     // 🔹 Elvis Operator (?:)

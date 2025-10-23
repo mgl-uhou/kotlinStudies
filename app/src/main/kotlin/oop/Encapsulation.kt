@@ -56,7 +56,7 @@ class BankAccount(
     }
 }
 
-fun main() {
+fun encapsulation() {
     val myAccount: BankAccount = BankAccount("Miguel Laurentino", 321, 8343_9871_8756_8374)
     myAccount.deposit(300.00)
     // With a public getter, you can access 'balance' directly.

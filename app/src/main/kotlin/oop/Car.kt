@@ -34,7 +34,7 @@ class Car3(
     }
 }
 
-fun main(){
+fun car(){
     val car1: Car1 = Car1()
 
     car1.name = "Mustang"

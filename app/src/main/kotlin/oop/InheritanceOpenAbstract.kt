@@ -58,7 +58,7 @@ abstract class Vehicle(val model: String, val year: Int, val brand: String){
     }
 }
 
-class Car(
+class CarExample(
     model: String,
     year: Int,
     brand: String
@@ -68,7 +68,7 @@ class Car(
     }
 }
 
-fun main() {
+fun inheritanceOpenAbstract() {
     val employee = Employee(
         Random.nextInt(1, 9999),
         "Miguel Laurentino",
@@ -98,7 +98,7 @@ fun main() {
     // val car = Vehicle("Ka", 2012, "Ford")
     // car.makeSound()
 
-    val car = Car("Ka", 2012, "Ford")
+    val car = CarExample("Ka", 2012, "Ford")
     println(car)
     for (i in 1..15){
         print("=-")
