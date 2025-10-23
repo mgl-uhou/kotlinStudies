@@ -1,0 +1,32 @@
+# Gradle
+.gradle/
+build/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Build-related
+out/
+bin/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VM crash logs
+hs_err_pid*
+
